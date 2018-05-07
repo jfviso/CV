@@ -1,0 +1,126 @@
+\documentclass[11pt,a4paper,sans]{moderncv}   % opciones posibles incluyen tamaño de fuente ('10pt', '11pt' and '12pt'), tamaño de papel ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' y 'landscape') y familia de fuentes ('sans' y 'roman')
+
+% temas de moderncv
+\moderncvstyle{casual}                        % las opciones de estilo son 'casual' (por omision),'classic', 'oldstyle' y 'banking'
+\moderncvcolor{black}
+
+% ajustes para los margenes de pagina
+\usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{2.4cm}           % si desea cambiar el ancho de la columna para las fechas
+\usepackage[spanish,english]{babel}
+\usepackage[utf8]{inputenc}
+
+% para que las secciones arranquen en pagina nueva si no entran.
+\usepackage{needspace}
+
+% datos personales
+\name{Juan Francisco}{Viso}
+\title{Curriculum Vitae}
+\address{Thompson 271}{8000 Bahía Blanca - Argentina}
+\phone[mobile]{+54-291-4261108}
+\phone[fixed]{+54-291-4516111}
+\email{jfviso@hotmail.com}
+
+\usepackage{csquotes}
+\usepackage{textgreek} %to use greek letters.
+
+\def\FormatName#1{%
+  \def\myname{Viso J.F.}%
+  \edef\name{#1}%
+  \ifx\name\myname
+    \underline{#1}%
+  \else
+    #1%
+  \fi}
+
+%To compile use:
+%pdflatex -synctex=1 -interaction=nonstopmode %.tex|bibtex courseschol.aux|bibtex papers.aux|bibtex posters.aux|bibtex courses.aux|bibtex other.aux|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf
+\usepackage[resetlabels]{multibib}
+\newcites{courseschol,papers,posters,courses,other}{,,,,}
+%----------------------------------------------------------------------------------
+%            contenido
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-1cm}
+
+\needspace{4\baselineskip}
+\section{Perfil Profesional}
+\cvitem{}{Licenciado en Física, pronto a Doctorarse, con experiencia en modelado computacional, particularmente en Dinámica Molecular (Gromacs).
+Experiencia en programación, uso de clusters y gestores de cola tipo Torque. Más de cinco años de trabajo como docente universitario.
+Personalidad proactiva y comunicativa con habilidad para adaptarse a los cambios y participar en equipos de trabajo de investigación y docencia.}
+
+\needspace{4\baselineskip}
+\section{Formación Académica}
+\cventry{2012--Presente}{Estudiante del Doctorado en Física}{Universidad Nacional del Sur}{Bahía Blanca}{}{}
+\cventry{2007--2012}{Licenciado en Física}{Universidad Nacional del Sur}{Bahía Blanca}{}{}
+\cventry{2006}{Bachiller en Ciencias Naturales}{Colegio Del Solar}{Bahía Blanca}{}{}
+
+\needspace{4\baselineskip}
+\section{Idiomas Extranjeros}
+\cvitemwithcomment{Ingles}{Nivel: First Certificate In English}{}
+\cvitemwithcomment{Italiano}{Nivel: Livello Medio Terzo Anno}{}
+\cvitemwithcomment{Alemán}{Nivel: Grundstufe II}{}
+
+\needspace{4\baselineskip}
+\section{Tesis de Doctorado}
+\cvitem{Título}{\emph{Cálculo de Modos Normales en Cápsides Virales: aplicación en Triatoma Virus y comparación con otros virus icosaédricos.}}
+\cvitem{Director}{Marcelo D. Costabel}
+%\cvitem{descripci\'on}{Una breve descripci\'on de la tesis}
+
+\needspace{4\baselineskip}
+\section{Experiencia Docente}
+\cventry{2015--Presente}{Asistente de Docencia}{Depto. de Física, Universidad Nacional del Sur}{}{}{Física II-IC (Para Ingeniería Civil - \textbf{Cargo ocupado actualmente}).\\ Mecánica del Continuo (Para Licenciatura en Física).\\ Física Aplicada T (Para Tecnicatura Universitaria en Operaciones Industriales).}
+\cventry{2018}{Profesor}{Depto. de Física, Universidad Nacional del Sur}{}{}{Curso de Nivelación en Física.}
+\cventry{2012--Presente}{Ayudante de Docencia A}{Depto. de Física, Universidad Nacional del Sur}{}{}{Física Arq (Para Arguitectura - \textbf{Cargo Ocupado Actualmente}).\\ Física General (Para Bioquímica - \textbf{Cargo Ocupado Actualmente}).\\Física Aplicada, Termodinámica y Laboratorio I (Para Licenciatura en Física).\\ Física I (Para Ingeniería Industrial).}
+\cventry{2013-15-16-17}{Ayudante de Docencia A}{Depto. de Física, Universidad Nacional del Sur}{}{}{Curso de Nivelación en Física.}
+\cventry{2010--2012}{Ayudante de Docencia B}{Depto. de Física, Universidad Nacional del Sur}{}{}{Mecánica (Para Licenciatura en Física).\\ Física I (Para Ingeniería Industrial).}
+
+\needspace{4\baselineskip}
+\section{Cursos de Posgrado Dictados}
+\cventry{2016}{Biofísica de Sistemas Biológicos: Modelización de la Estructura, Dinámica, Estabilidad y Reacciones Químicas}{Depto. de Física, UNS}{}{}{A cargo del tutorial de Dinámica Molecular.}
+
+\needspace{4\baselineskip}
+\section{Aplicaciones a la Industria}
+\cventry{2017}{Implementación de un modelo de optimización en lenguaje Python para la empresa Profertil}{}{}{}{}
+
+\needspace{4\baselineskip}
+\section{Becas}
+\cventry{2014}{Beca Interna Doctoral}{}{}{}{Beca otorgada por el CONICET para finalizar los estudios de Doctorado}
+\cventry{2012}{Beca de Postgrado Tipo I}{}{}{}{Beca otorgada por el CONICET para inicializar los estudios de Doctorado}
+\cventry{2011}{Beca de Introducción a la Investigación para Alumnos Avanzados}{}{}{}{Beca otorgada por la UNS para inicializar a los alumnos de grado en tareas de investigación}
+
+\needspace{4\baselineskip}
+\section{Estadías en Centros de Investigación}
+\cventry{2014}{Estadía en el laboratorio del Dr. Diego Guérin en el Grupo de Cristalografía de Proteínas y Virus en la Unidad de Biofísica de la Universidad del País Vasco (UPV-EHU)}{Financiado por el programa de “Pasantías en Centros de Investigación Destinados a Jóvenes Docentes” de la UNS y por la Fundación de Biofísica Bizkaia}{}{}{}
+
+\needspace{4\baselineskip}
+\section{Actividades de Extensión Universitaria}
+\cventry{2015}{Participación en el proyecto “Qué Onda con la Luz”}{Actividad de divulgación donde se propone despertar la curiosidad por fenómenos naturales donde la luz es protagonista y así poder explicar en términos simples la razón de su ocurrencia}{}{}{Avalado por el Depto. de Física de la UNS y el Instituto de Física del Sur.}
+\cventry{2011--2014}{Participación en el proyecto “Curiosos en Acción”}{Este proyecto consiste en un Taller de Ciencias para docentes de nivel Inicial, Primario y Secundario}{}{}{Avalado por el Depto. de Física de la Universidad Nacional del Sur.}
+
+\needspace{4\baselineskip}
+\section{Cursos de Posgrado}
+\cvitem{$\bullet$}{Seminario Introductorio A La Cristalografía De Proteínas.}
+\cvitem{$\bullet$}{IX POSLATAM Course: Quantitative Imaging in Biophysics.}
+\cvitem{$\bullet$}{Espectroscopía Infrarroja: Su Aplicación a la Elucidación Estructural de Compuestos Orgánicos.}
+\cvitem{$\bullet$}{VIII POSLATAM Course: Membrane Lipids, Transporters, Channels… and all that Crosstalk.}
+\cvitem{$\bullet$}{School in Computational Condensed Matter Physics: From Atomistic Simulations to Universal Model Hamiltonean.}
+\cvitem{$\bullet$}{Performing Molecular Simulations With SIRAH Force Field.}
+\cvitem{$\bullet$}{Elementos de Química Cuántica Aplicados al Estudio Teórico-Computacional de Moléculas.}
+\cvitem{$\bullet$}{Diseño Computacional de Proteínas.}
+\cvitem{$\bullet$}{VII POSLATAM Course: Advanced Concepts of Membrane and Biomimetic Systems.}
+\cvitem{$\bullet$}{VI POSLATAM Course: Biophysical Approaches to Study Systems of Biological Interest.}
+\cvitem{$\bullet$}{Simulación Computacional Avanzada en Química, Bioquímica y Ciencias de Materiales.}
+\cvitem{$\bullet$}{Biofísica Molecular Computacional.}
+\cvitem{$\bullet$}{Metodología de la Investigación Científica.}
+\cvitem{$\bullet$}{Fundamentos de Bioinformática.}
+
+\needspace{4\baselineskip}
+\section{Lenguajes y Aplicativos Computacionales}
+\cvitem{$\bullet$}{Experiencia en programación en lenguaje Python, Fortran, C y R.}
+\cvitem{$\bullet$}{Experiencia en Dinámica Molecular (Gromacs) y técnicas de Muestreo Avanzado (Potential of Mean Forces y Umbrella Sampling).}
+\cvitem{$\bullet$}{Experiencia en sistemas operativos tipo Unix.}
+\cvitem{$\bullet$}{Experiencia en Shell Scripting en Bash y Python.}
+
+\end{document}
